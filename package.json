@@ -1,13 +1,11 @@
 {
   "name": "elite-learning-programme",
   "version": "1.0.0",
-  "description": "Satoshi Media - Elite Learning Programme",
-  "main": "server/index.js",
   "scripts": {
     "dev:server": "nodemon server/index.js",
     "dev:client": "cd client && npm run dev",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm install && npx vite build",
     "start": "node server/index.js"
   },
   "dependencies": {
