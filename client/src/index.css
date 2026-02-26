@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Rubik:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
   --navy:        #0B1F3A;
@@ -17,8 +17,9 @@
   --gold:        #C9A84C;
   --green:       #10B981;
 
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
+  --font-display: 'Rubik', system-ui, sans-serif;
+  --font-body:    'Poppins', system-ui, sans-serif;
+  --font-label:   'Josefin Sans', system-ui, sans-serif;
 
   --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
   --shadow-md: 0 4px 20px rgba(11,31,58,.12);
@@ -45,9 +46,9 @@ button { cursor: pointer; font-family: inherit; }
 
 h1,h2,h3,h4 { font-family: var(--font-display); line-height: 1.2; }
 h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 800; }
-h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; }
-h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 600; }
-h4 { font-size: 1.1rem; font-weight: 600; }
+h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; }
+h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); font-weight: 600; }
+h4 { font-size: 1.05rem; font-weight: 600; }
 p  { font-size: 1rem; }
 
 .container    { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
@@ -74,7 +75,8 @@ p  { font-size: 1rem; }
 /* Section labels */
 .section-label {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: .78rem; font-weight: 600; letter-spacing: .12em;
+  font-size: .78rem; font-weight: 700; letter-spacing: .14em;
+  font-family: var(--font-label);
   text-transform: uppercase; color: var(--orange); margin-bottom: 14px;
 }
 .section-label::before { content: ''; width: 28px; height: 2px; background: var(--orange); flex-shrink: 0; }

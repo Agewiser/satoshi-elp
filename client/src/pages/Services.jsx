@@ -14,7 +14,7 @@ export default function Services() {
         <div className="hero-grid" />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
           <div className="section-label" style={{ justifyContent: 'center', color: 'var(--orange)' }}>Programme Details</div>
-          <h1 className="text-white">Services <span className="text-orange">& Pricing</span></h1>
+          <h1 className="text-white">Programme <span className="text-orange">& Pricing</span></h1>
           <p className="lead" style={{ color: 'rgba(255,255,255,.75)', maxWidth: 520, margin: '12px auto 0' }}>
             Everything included in one transparent monthly investment. No hidden costs.
           </p>
@@ -34,7 +34,7 @@ export default function Services() {
                   <div style={{ color: 'rgba(255,255,255,.8)', fontSize: '.9rem', marginTop: 4 }}>per child · per month</div>
                 </div>
                 <div style={{ display: 'flex', gap: 10 }}>
-                  {[['20','sessions/month'],['2hrs','per session']].map(([v, l]) => (
+                  {[['20','sessions/month'],['1hr','per session']].map(([v, l]) => (
                     <div key={l} style={{ background: 'rgba(255,255,255,.2)', borderRadius: 12, padding: '12px 20px', textAlign: 'center' }}>
                       <div style={{ color: 'white', fontSize: '1.4rem', fontWeight: 700, fontFamily: 'var(--font-display)' }}>{v}</div>
                       <div style={{ color: 'rgba(255,255,255,.85)', fontSize: '.78rem' }}>{l}</div>
@@ -67,15 +67,39 @@ export default function Services() {
             <div style={{ background: 'var(--orange-pale)', border: '1px solid rgba(249,115,22,.2)', borderRadius: 16, padding: '24px 28px', marginTop: 20 }}>
               <div style={{ fontWeight: 700, marginBottom: 8 }}>💡 Put it in perspective</div>
               <p style={{ color: 'var(--grey-700)', fontSize: '.92rem', lineHeight: 1.7 }}>
-                ₦500,000 for 40 hours of private, expert education delivered to your home. That's ₦12,500 per hour — less than most Lagos driving lessons. You get chess strategy, focus coaching, verbal confidence training and a monthly progress report. This is a complete academic development investment, not a lesson teacher.
+              ₦500,000 for 20 hours of private, expert education delivered to your home. That's ₦25,000 per hour — for a fully structured programme that covers core academics, chess strategy, focus coaching and verbal confidence. This is a complete academic development investment, not conventional tutoring.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SESSION BREAKDOWN ─── */}
+      {/* ── WHY ELP / COMPARISON ─── */}
       <section className="section bg-grey">
+        <div className="container">
+          <div className="text-center mb-48">
+            <div className="section-label" style={{ justifyContent: 'center' }}>Why Elite Learning</div>
+            <h2>Beyond <span className="text-orange">Conventional Tutoring.</span></h2>
+          </div>
+          <div style={{ maxWidth: 780, margin: '0 auto', overflow: 'hidden', borderRadius: 16, border: '1px solid var(--grey-200)', boxShadow: 'var(--shadow-md)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', background: 'var(--grey-100)' }}>
+              <div style={{ padding: '14px 20px' }}></div>
+              <div style={{ padding: '14px 20px', textAlign: 'center', fontSize: '.8rem', fontWeight: 600, color: 'var(--grey-400)', textTransform: 'uppercase', borderLeft: '1px solid var(--grey-200)' }}>Conventional Tutoring</div>
+              <div style={{ padding: '14px 20px', textAlign: 'center', background: 'var(--navy)', fontSize: '.8rem', fontWeight: 700, color: 'var(--orange)', textTransform: 'uppercase' }}>Elite Learning</div>
+            </div>
+            {COMPARISON.map((row, i) => (
+              <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderTop: '1px solid var(--grey-200)', background: i % 2 === 0 ? 'white' : 'var(--grey-100)' }}>
+                <div style={{ padding: '13px 20px', fontSize: '.88rem', fontWeight: 600 }}>{row[0]}</div>
+                <div style={{ padding: '13px 20px', textAlign: 'center', fontSize: '.88rem', color: 'var(--grey-400)', borderLeft: '1px solid var(--grey-200)' }}>{row[1]}</div>
+                <div style={{ padding: '13px 20px', textAlign: 'center', fontSize: '.88rem', fontWeight: 600, color: '#10B981', background: 'rgba(16,185,129,.04)' }}>{row[2]}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SESSION BREAKDOWN ─── */}
+      <section className="section">
         <div className="container">
           <div className="text-center mb-48">
             <div className="section-label" style={{ justifyContent: 'center' }}>Session Structure</div>
@@ -105,29 +129,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* ── COMPARISON ─── */}
-      <section className="section">
-        <div className="container">
-          <div className="text-center mb-48">
-            <div className="section-label" style={{ justifyContent: 'center' }}>Why Elite Learning</div>
-            <h2>Not just a <span className="text-orange">lesson teacher.</span></h2>
-          </div>
-          <div style={{ maxWidth: 780, margin: '0 auto', overflow: 'hidden', borderRadius: 16, border: '1px solid var(--grey-200)', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', background: 'var(--grey-100)' }}>
-              <div style={{ padding: '14px 20px' }}></div>
-              <div style={{ padding: '14px 20px', textAlign: 'center', fontSize: '.8rem', fontWeight: 600, color: 'var(--grey-400)', textTransform: 'uppercase', borderLeft: '1px solid var(--grey-200)' }}>Typical Lesson Teacher</div>
-              <div style={{ padding: '14px 20px', textAlign: 'center', background: 'var(--navy)', fontSize: '.8rem', fontWeight: 700, color: 'var(--orange)', textTransform: 'uppercase' }}>Elite Learning</div>
-            </div>
-            {COMPARISON.map((row, i) => (
-              <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderTop: '1px solid var(--grey-200)', background: i % 2 === 0 ? 'white' : 'var(--grey-100)' }}>
-                <div style={{ padding: '13px 20px', fontSize: '.88rem', fontWeight: 600 }}>{row[0]}</div>
-                <div style={{ padding: '13px 20px', textAlign: 'center', fontSize: '.88rem', color: 'var(--grey-400)', borderLeft: '1px solid var(--grey-200)' }}>{row[1]}</div>
-                <div style={{ padding: '13px 20px', textAlign: 'center', fontSize: '.88rem', fontWeight: 600, color: '#10B981', background: 'rgba(16,185,129,.04)' }}>{row[2]}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── FAQ ─── */}
       <section className="section bg-grey">
@@ -180,7 +181,7 @@ const INCLUDED = [
   'Verbal confidence exercises',
   'Advanced reading programme',
   'Monthly WhatsApp progress report',
-  'Dedicated personal tutor',
+  'Dedicated personal instructor',
   'We come to your home',
   'Ages 5–13 (all classes)',
   'Exam prep integration',
@@ -211,13 +212,13 @@ const SESSION_WEEKS = [
       { num: '→', title: 'Monthly assessment + goal setting', sub: 'Score all subjects, set next month targets' },
       { num: '→', title: 'Progress report compiled', sub: 'Full report sent to parent on WhatsApp' },
     ]},
-  { title: 'Inside a 2-Hour Session', badge: 'orange', badgeText: 'Every session', accentColor: 'var(--orange)', dark: true,
+  { title: 'Inside a 1-Hour Session', badge: 'orange', badgeText: 'Every session', accentColor: 'var(--orange)', dark: true,
     items: [
-      { num: '0–10', title: 'Warm-up + review of last session', sub: '' },
-      { num: '10–60', title: 'Core subject deep-work block', sub: '' },
-      { num: '60–70', title: 'Chess or verbal confidence break', sub: '' },
-      { num: '70–110', title: 'Second subject or exam practice', sub: '' },
-      { num: '110–120', title: 'Wrap-up, focus log, next session prep', sub: '' },
+      { num: '0–5',   title: 'Warm-up + review of last session', sub: '' },
+      { num: '5–30',  title: 'Core subject deep-work block', sub: '' },
+      { num: '30–40', title: 'Chess or verbal confidence break', sub: '' },
+      { num: '40–55', title: 'Second subject or exam practice', sub: '' },
+      { num: '55–60', title: 'Wrap-up, focus log, next session prep', sub: '' },
     ]},
 ]
 
@@ -234,7 +235,7 @@ const COMPARISON = [
 const FAQS = [
   ['Do you serve my area?', 'We currently serve Victoria Island, Ikoyi, and Lekki Phase 1. If you\'re just outside these areas, reach out on WhatsApp — we may still be able to accommodate you.'],
   ['What age does my child need to be?', 'We work with children aged 5 to 13. Our approach adapts significantly between age groups — a 5-year-old session looks very different from a 13-year-old\'s.'],
-  ['Why is the price ₦500,000?', 'This reflects the 1-on-1 nature, quality of tutors, comprehensive curriculum and home delivery. At ₦12,500 per hour for private education, it\'s competitively priced for what you receive.'],
+  ['Why is the price ₦500,000?', 'This reflects the 1-on-1 nature, quality of instructors, comprehensive curriculum and home delivery. At ₦25,000 per hour for private education, it\'s competitively priced for what you receive.'],
   ['How do I know it\'s working?', 'Every month you receive a detailed progress report on WhatsApp showing subject scores, attendance, what improved, and what we\'re working on next. Measurable data within 30 days.'],
   ['Can sessions be rescheduled?', 'Yes. We understand family schedules are dynamic. Sessions can be rescheduled with at least 24 hours\' notice.'],
   ['What subjects do you cover?', 'All core subjects your child studies in school — Maths, English, Science, Social Studies and more — alongside our signature pillars: Chess, Focus Coaching, Verbal Confidence and Advanced Reading.'],

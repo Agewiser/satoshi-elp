@@ -11,10 +11,10 @@ export function About() {
       <div className="page-hero">
         <div className="hero-grid" />
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-label" style={{ justifyContent: 'center', color: 'var(--orange)' }}>Our Story</div>
+          <div className="section-label" style={{ justifyContent: 'center', color: 'var(--orange)' }}>Who We Are</div>
           <h1 className="text-white">About <span className="text-orange">Elite Learning</span></h1>
           <p className="lead" style={{ color: 'rgba(255,255,255,.75)', maxWidth: 560, margin: '16px auto 0' }}>
-            A {cfg.companyName} initiative built for parents who expect more than the standard lesson teacher.
+            A {cfg.companyName} initiative built for parents who expect more than conventional tutoring.
           </p>
         </div>
       </div>
@@ -24,15 +24,18 @@ export function About() {
           <div className="grid-2" style={{ gap: 64 }}>
             <div>
               <div className="section-label">Why We Built This</div>
-              <h2>The best parents in Lagos <span className="text-orange">deserve better.</span></h2>
+              <h2>The most thoughtful parents <span className="text-orange">deserve better.</span></h2>
               <p className="lead" style={{ color: 'var(--grey-700)', margin: '16px 0' }}>
-                We kept seeing the same story: bright children, successful parents in {cfg.servingAreas} — and lesson teachers who showed up, drilled past questions, and left. No structure. No progress reports. No real development.
+                Nigeria has no shortage of lesson teachers. Every estate in Victoria Island, every close in Ikoyi, every street in Lekki Phase 1 has one. Parents pay. Teachers show up. Past questions get drilled. The teacher leaves.
               </p>
               <p style={{ color: 'var(--grey-700)', marginBottom: 16 }}>
-                The Elite Learning Programme was designed to fix that. We built a curriculum that treats the whole child — not just their exam scores. Chess trains strategic thinking. Focus coaching extends attention spans. Verbal confidence turns quiet children into communicators.
+                And the child remains exactly where they were — except now they've memorised answers they don't understand, to questions that may not even appear in the exam. We kept seeing the same story repeat itself: bright children, thoughtful parents, and lesson teachers who showed up with no structure, no accountability, and no real development plan.
+              </p>
+              <p style={{ color: 'var(--grey-700)', marginBottom: 16 }}>
+                The lesson teacher model was built for a different era. It assumes a child's only problem is missing content. But the children struggling most today aren't struggling because they haven't seen enough past questions. They're struggling because nobody has taught them <em>how to think</em> — how to sit with difficulty, how to organise their thoughts, how to focus without prompting.
               </p>
               <p style={{ color: 'var(--grey-700)' }}>
-                We come to your home. We work 1-on-1. We track progress with data. And we hold ourselves accountable with a detailed report every single month.
+                Elite Learning was built to fix that. We come to your home. We work 1-on-1. We track progress with data. And we hold ourselves accountable with a detailed report every single month.
               </p>
             </div>
             <div style={{ background: 'var(--grey-100)', borderRadius: 24, padding: 40, display: 'flex', flexDirection: 'column', gap: 28 }}>
@@ -55,9 +58,12 @@ export function About() {
           <div className="text-center mb-48">
             <div className="section-label" style={{ justifyContent: 'center' }}>By The Numbers</div>
             <h2>What we deliver <span className="text-orange">every month.</span></h2>
+            <p style={{ color: 'var(--grey-700)', maxWidth: 480, margin: '12px auto 0', fontSize: '.95rem' }}>
+              Quality over quantity — every session is structured, purposeful and built around your child specifically.
+            </p>
           </div>
           <div className="grid-4">
-            {[['20','Sessions','Per child, per month'],['40','Hours','Of private instruction'],['5','Pillars','Core, Chess, Focus, Verbal, Reading'],['1','Report','Detailed, monthly, on WhatsApp']].map(([val, label, sub]) => (
+            {[['20','Sessions','Per child, per month'],['20','Hours','Of private instruction'],['5','Pillars','Core, Chess, Focus, Verbal, Reading'],['1','Report','Detailed, monthly, on WhatsApp']].map(([val, label, sub]) => (
               <div key={label} className="card card-pad text-center">
                 <div style={{ fontFamily: 'var(--font-display)', fontSize: '3rem', fontWeight: 800, color: 'var(--orange)', lineHeight: 1, marginBottom: 8 }}>{val}</div>
                 <div style={{ fontWeight: 600, marginBottom: 4 }}>{label}</div>

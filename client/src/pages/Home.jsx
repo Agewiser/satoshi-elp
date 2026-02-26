@@ -34,7 +34,7 @@ export default function Home() {
               </Link>
             </div>
             <div style={{ display: 'flex', gap: 32, marginTop: 48, flexWrap: 'wrap' }}>
-              {[['20','Sessions/month'],['2hrs','Per session'],['5','Learning pillars'],['1-on-1','Always private']].map(([val, label]) => (
+              {[['20','Sessions/month'],['1hr','Per session'],['5','Learning pillars'],['1-on-1','Always private']].map(([val, label]) => (
                 <div key={label} style={{ color: 'rgba(255,255,255,.7)', fontSize: '.88rem' }}>
                   <span style={{ color: 'white', fontFamily: 'var(--font-display)', fontSize: '1.6rem', fontWeight: 700, display: 'block' }}>{val}</span>
                   {label}
@@ -54,30 +54,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ── 5 PILLARS ─────────────────────────────────────────── */}
-      <section className="section bg-grey">
-        <div className="container">
-          <div className="text-center mb-48">
-            <div className="section-label" style={{ justifyContent: 'center' }}>The Programme</div>
-            <h2>Five Pillars of <span className="text-orange">Elite Learning</span></h2>
-            <p className="lead" style={{ color: 'var(--grey-700)', maxWidth: 560, margin: '8px auto 0' }}>
-              We don't just drill past questions. We build the whole child — academically, strategically and emotionally.
-            </p>
-          </div>
-          <div className="grid-3">
-            {PILLARS.map(p => (
-              <div key={p.title} className="card card-pad" style={{ borderTop: `4px solid ${p.color}` }}>
-                <div style={{ width: 48, height: 48, background: p.bg, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', marginBottom: 20 }}>{p.icon}</div>
-                <h4 style={{ marginBottom: 8 }}>{p.title}</h4>
-                <p style={{ color: 'var(--grey-700)', fontSize: '.92rem' }}>{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── HOW IT WORKS ──────────────────────────────────────── */}
-      <section className="section">
+      <section className="section bg-grey">
         <div className="container">
           <div className="grid-2" style={{ gap: 64 }}>
             <div>
@@ -109,6 +87,28 @@ export default function Home() {
               <div className="section-label">Sample Report</div>
               <SampleReportCard />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5 PILLARS ─────────────────────────────────────────── */}
+      <section className="section">
+        <div className="container">
+          <div className="text-center mb-48">
+            <div className="section-label" style={{ justifyContent: 'center' }}>The Programme</div>
+            <h2>Five Pillars of <span className="text-orange">Elite Learning</span></h2>
+            <p className="lead" style={{ color: 'var(--grey-700)', maxWidth: 560, margin: '8px auto 0' }}>
+              We don't just drill past questions. We build the whole child — academically, strategically and emotionally.
+            </p>
+          </div>
+          <div className="grid-3">
+            {PILLARS.map(p => (
+              <div key={p.title} className="card card-pad" style={{ borderTop: `4px solid ${p.color}` }}>
+                <div style={{ width: 48, height: 48, background: p.bg, borderRadius: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', marginBottom: 20 }}>{p.icon}</div>
+                <h4 style={{ marginBottom: 8 }}>{p.title}</h4>
+                <p style={{ color: 'var(--grey-700)', fontSize: '.92rem' }}>{p.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -175,9 +175,12 @@ function SampleReportCard() {
     <div className="card">
       <div style={{ background: 'var(--navy)', padding: '20px 24px' }}>
         <div style={{ fontFamily: 'var(--font-display)', color: 'white', fontWeight: 700 }}>Monthly Progress Report</div>
-        <div style={{ color: 'var(--gold)', fontSize: '.78rem', marginTop: 2 }}>Elite Learning Programme · January 2025</div>
+        <div style={{ color: 'var(--gold)', fontSize: '.78rem', marginTop: 2 }}>Elite Learning Programme · Sample Report</div>
       </div>
       <div style={{ padding: 24 }}>
+        <div style={{ fontSize: '.78rem', color: 'var(--grey-400)', marginBottom: 14 }}>
+          <strong style={{ color: 'var(--navy)' }}>John Doe</strong> · Age 9 · Primary 4 · <em>Sample only</em>
+        </div>
         <div style={{ fontSize: '.82rem', fontWeight: 700, color: 'var(--grey-400)', letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: 14 }}>Subject Performance</div>
         {bars.map(b => (
           <div key={b.label} style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
@@ -189,14 +192,19 @@ function SampleReportCard() {
           </div>
         ))}
         <div style={{ background: 'var(--grey-100)', borderRadius: 10, padding: 14, marginTop: 16, fontSize: '.82rem', color: 'var(--grey-700)', fontStyle: 'italic' }}>
-          "Emeka has had a strong first month. His chess interest has been a pleasant surprise — we are using it to build his strategic thinking in Maths…"
+          "John has had a strong first month. His enthusiasm for chess has been a pleasant surprise — we are using it to build his strategic thinking in Maths…"
         </div>
         <div style={{ marginTop: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <span style={{ fontSize: '.78rem', color: 'var(--grey-400)' }}>8/10 sessions attended</span>
-          <Link to="/assessment" className="btn btn-primary btn-sm"
-            onClick={() => track('report_download', { type: 'sample' })}>
+          <a
+            href="/sample-report.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-primary btn-sm"
+            onClick={() => track('report_download', { type: 'sample' })}
+          >
             Get Sample Report →
-          </Link>
+          </a>
         </div>
       </div>
     </div>
