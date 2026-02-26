@@ -150,7 +150,9 @@ app.post('/api/admin/login', adminLimiter, (req, res) => {
 console.log('ENV USERNAME:', process.env.ADMIN_USERNAME)
 console.log('ENV PASSWORD:', process.env.ADMIN_PASSWORD)
 
-  if (username !== process.env.ADMIN_USERNAME || password !== process.env.ADMIN_PASSWORD) {
+  const ADMIN_USER = process.env.ADMIN_USERNAME || 'admin'
+  const ADMIN_PASS = process.env.ADMIN_PASSWORD || 'elpadmin2024'
+  if (username !== ADMIN_USER || password !== ADMIN_PASS) {
     return res.status(401).json({ error: 'Invalid credentials' });
   }
   const token = jwt.sign({ role: 'admin' }, process.env.JWT_SECRET || 'dev_secret_change_me', { expiresIn: '8h' });
