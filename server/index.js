@@ -143,10 +143,7 @@ function authRequired(req, res, next) {
 // Admin login
 app.post('/api/admin/login', adminLimiter, (req, res) => {
   const { username, password } = req.body;
-  // Temp code block
-  console.log('LOGIN ATTEMPT:', username, password)
-console.log('ENV USERNAME:', process.env.ADMIN_USERNAME)
-console.log('ENV PASSWORD:', process.env.ADMIN_PASSWORD)
+
 
   const ADMIN_USER = process.env.ADMIN_USERNAME || 'admin'
   const ADMIN_PASS = process.env.ADMIN_PASSWORD || 'elpadmin2024'
