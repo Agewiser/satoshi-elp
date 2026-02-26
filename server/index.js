@@ -1,7 +1,5 @@
-console.log('ALL ENV KEYS:', Object.keys(process.env).join(', '))
-console.log('TEST_VAR:', process.env.TEST_VAR)
-
 require('dotenv').config();
+
 const express = require('express');
 const helmet  = require('helmet');
 const cors    = require('cors');
