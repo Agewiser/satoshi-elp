@@ -113,8 +113,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ──────────────────────────────────────── */}
+      {/* ── COMPARISON TABLE ──────────────────────────────────── */}
       <section className="section bg-grey">
+        <div className="container">
+          <div className="text-center mb-48">
+            <div className="section-label" style={{ justifyContent: 'center' }}>The Difference</div>
+            <h2>What your child gets that a <span className="text-orange">classroom can't give.</span></h2>
+          </div>
+          <div style={{ maxWidth: 780, margin: '0 auto', overflow: 'hidden', borderRadius: 16, border: '1px solid var(--grey-200)', boxShadow: 'var(--shadow-md)' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', background: 'var(--grey-100)' }}>
+              <div style={{ padding: '14px 20px' }} />
+              <div style={{ padding: '14px 20px', textAlign: 'center', fontSize: '.8rem', fontWeight: 600, color: 'var(--grey-400)', textTransform: 'uppercase', borderLeft: '1px solid var(--grey-200)', fontFamily: 'var(--font-label)' }}>Average Classroom</div>
+              <div style={{ padding: '14px 20px', textAlign: 'center', background: 'var(--navy)', fontSize: '.8rem', fontWeight: 700, color: 'var(--orange)', textTransform: 'uppercase', fontFamily: 'var(--font-label)' }}>Elite Learning</div>
+            </div>
+            {HOME_COMPARISON.map((row, i) => (
+              <div key={i} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', borderTop: '1px solid var(--grey-200)', background: i % 2 === 0 ? 'white' : 'var(--grey-100)' }}>
+                <div style={{ padding: '13px 20px', fontSize: '.88rem', fontWeight: 600 }}>{row[0]}</div>
+                <div style={{ padding: '13px 20px', textAlign: 'center', fontSize: '.88rem', color: 'var(--grey-400)', borderLeft: '1px solid var(--grey-200)' }}>{row[1]}</div>
+                <div style={{ padding: '13px 20px', textAlign: 'center', fontSize: '.88rem', fontWeight: 600, color: '#10B981', background: 'rgba(16,185,129,.04)' }}>{row[2]}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ──────────────────────────────────────── */}
+      <section className="section">
         <div className="container">
           <div className="text-center mb-48">
             <div className="section-label" style={{ justifyContent: 'center' }}>What Parents Say</div>
@@ -224,6 +248,15 @@ const STEPS = [
   { color: 'var(--orange)', title: 'Fill the 5-Minute Assessment', desc: 'Tell us about your child\'s learning style and goals. No commitment required.' },
   { color: 'var(--blue)',   title: 'Receive Your Child\'s Learning Profile', desc: 'Within 24 hours, we send a personalised profile on WhatsApp — learning type and priority subjects.' },
   { color: '#10B981',       title: 'Decide When You\'re Ready', desc: 'Review the profile. If you\'d like to begin, reach out on WhatsApp. No pressure, no home visit required.' },
+]
+
+const HOME_COMPARISON = [
+  ['Attention per child',          '1–2 min per hour',    '✓ Full 60 minutes'],
+  ['Curriculum pace',              'Fixed for whole class','✓ Set by your child'],
+  ['Immediate feedback',           'Rarely possible',      '✓ Every question'],
+  ['Weak spot identified',         'Months, if ever',      '✓ First session'],
+  ['Chess, Focus & Verbal skills', '✗ Almost never',       '✓ Every session'],
+  ['Progress tracking',            'End-of-term report',   '✓ Monthly on WhatsApp'],
 ]
 
 const TESTIMONIALS = [

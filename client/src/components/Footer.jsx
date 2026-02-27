@@ -30,10 +30,10 @@ export default function Footer() {
 
           <div>
             <h5 style={s.colHead}>Subjects</h5>
-            <Link to="/services" style={s.link}>Core Academics</Link>
-            <Link to="/services" style={s.link}>Chess Strategy</Link>
-            <Link to="/services" style={s.link}>Focus Coaching</Link>
-            <Link to="/services" style={s.link}>Verbal Confidence</Link>
+            <Link to="/subjects/core-academics"    style={s.link}>Core Academics</Link>
+            <Link to="/subjects/chess-strategy"    style={s.link}>Chess Strategy</Link>
+            <Link to="/subjects/focus-coaching"    style={s.link}>Focus Coaching</Link>
+            <Link to="/subjects/verbal-confidence" style={s.link}>Verbal Confidence</Link>
           </div>
 
           <div>
@@ -48,7 +48,7 @@ export default function Footer() {
             >
               WhatsApp Us
             </a>
-            <Link to="/about" style={s.link}>Our Story</Link>
+            <Link to="/about" style={s.link}>About Us</Link>
           </div>
         </div>
 
