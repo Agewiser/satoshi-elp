@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import Navbar from './Navbar'
-import Footer from './Footer'
-import { WAButton, FomoTicker, ChatWidget } from './WAButton'
+import Navbar     from './Navbar'
+import Footer     from './Footer'
+import { WAButton, ChatWidget, FomoTicker } from './WAButton'
 
 export default function Layout() {
   return (
